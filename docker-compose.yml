@@ -1,0 +1,36 @@
+version: '3'
+services:
+  vanhack-api:
+    tty: true
+    stdin_open: true
+    build: .
+    container_name: vanhack-api
+    command: bash start.sh
+    environment:
+      RAILS_ENV: development
+    volumes:
+      - .:/app
+    ports:
+      - "8000:3000"
+    depends_on:
+      - db_vanhack-api
+    links:
+      - db_vanhack-api
+    networks:
+      - vanhack-api-net
+
+  db_vanhack-api:
+    container_name: db_vanhack-api
+    image: nouchka/sqlite3
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/docker-entrypoint
+    environment:
+      SQLITE_PASSWORD: 123456
+      SQLITE_USER: root
+    networks:
+      - vanhack-api-net
+
+networks:
+  vanhack-api-net:
