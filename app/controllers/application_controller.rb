@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
+  rescue_from ActionController::UnpermittedParameters, with: :error_render_method
+  # Stop rails wrapping params
+  wrap_parameters false
+
+  # Customizing UnpermittedParams response to follow API specification.
+  def error_render_method
+    head :bad_request
+  end
 end
