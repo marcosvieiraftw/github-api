@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      actor:
+        id_external: ID from github
+        login: Login
+        avatar_url: URL from github avatar

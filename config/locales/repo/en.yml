@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      actor:
+        id_external: ID from github
+        name: Repository name
+        url: Github repository URL

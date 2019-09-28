@@ -1,0 +1,7 @@
+en:
+  activerecord:
+    attributes:
+      event:
+        id_external: ID from github
+        event_type: Type
+        created_at: Creation timestamp
