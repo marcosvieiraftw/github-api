@@ -57,7 +57,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
    }
 ]
 ```
-* 4: GET `{base_url}/actors` will return all Actors ordered by its amount of Events, last event date DESC and login ASC.
+* 4: GET `{base_url}/actors` will return all Actors sort by its amount of Events, last event date DESC and login ASC.
 ```json
 [ 
    { 
