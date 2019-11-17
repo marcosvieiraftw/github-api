@@ -5,7 +5,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
 
 * 1: DELETE `{base_url}/erase` will delete all events from database.
 * 2: POST `{base_url}/events` will create an event in database along with its relations. If Actor and/or Repo does not exist it will be created before inserting events.
-``` JSON
+```json
 { 
    "id":1299472637,
    "type":"PushEvent",
@@ -23,7 +23,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
 }
 ```
 * 3: GET `{base_url}/events` will return all events from database in following format:
-``` JSON
+```json
 [ 
    { 
       "id":1000026630,
@@ -58,7 +58,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
 ]
 ```
 * 4: GET `{base_url}/actors` will return all Actors ordered by its amount of Events, last event date DESC and login ASC.
-``` JSON
+```json
 [ 
    { 
       "id":4785310,
@@ -83,7 +83,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
 ]
 ```
 * 5: GET `{base_url}/actors/4189746`  will return all events from an actor.
-``` JSON
+```json
 [ 
    { 
       "id":1299472637,
@@ -118,7 +118,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
 ]
 ```
 * 6: PUT `{base_url}/actors`  will update Actor `login` and/or `avatar_url` by id sent in request body.
-``` JSON
+```json
 { 
    "id":4189746,
    "login":"lisa67",
@@ -126,7 +126,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
 }
 ```
 * 7: GET `{base_url}/actors/streak`  will return Actors ordered by streak (How many unbroken sequences of events Actor has daily based. `Gaps and Islands` challenge), last event date DESC and login ASC.
-``` JSON
+```json
 [ 
    { 
       "id":4785310,
