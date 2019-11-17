@@ -125,7 +125,7 @@ The API has 7 endpoints oriented by Github events. Those endpoints are supported
    "avatar_url":"https://gavatar.com/4189746"
 }
 ```
-* 7: GET `{base_url}/actors/streak`  will return Actors ordered by streak (How many unbroken sequences of events Actor has daily based. `Gaps and Islands` challenge), last event date DESC and login ASC.
+* 7: GET `{base_url}/actors/streak`  will return Actors sort by streak (How many unbroken sequences of events Actor has daily based. `Gaps and Islands` challenge), last event date DESC and login ASC.
 ```json
 [ 
    { 
