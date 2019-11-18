@@ -1,4 +1,4 @@
-# Github API challenge.
+# Github API
 Automated tests are available by running `$ rspec` on the project root folder.
 
 The API has 7 endpoints oriented by Github events. Those endpoints are supported by entities: Event, Actor, and Repository.
